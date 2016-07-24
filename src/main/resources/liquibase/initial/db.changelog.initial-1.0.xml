@@ -3,12 +3,12 @@
                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
 http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
-
     <changeSet id="0" author="trungphan">
         <preConditions onFail="MARK_RAN">
             <tableExists tableName="user"/>
         </preConditions>
         <dropTable tableName="user"/>
+        <rollback/>
     </changeSet>
     <changeSet id="1" author="trungphan">
         <createTable tableName="user">
