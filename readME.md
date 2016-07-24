@@ -21,6 +21,7 @@ The second way helps us know the tag that is being applied to the current releas
 - Rollback by date:
  mvn liquibase:rollback -Dliquibase.rollbackDate=2016-07-24T11:46:48
 
+
 WARNING: 
 - In case you want to add column with nullable=false.
 You have to add change: addDefaultValue.Why?
@@ -32,3 +33,9 @@ And you migrate the db again, run again the changeset add column + notnull const
 - Rollback notice
     Liquibase doesn't generate rollback statement for the changeset refactorings that use rawSQL, or they are such as "dropTable", "insertData"
     You have to notice this cases to create the rollback statement by yourself by adding the tag rollback inside that changeset.
+
+- Profile:
+    + To execute goal update on db of local env:
+     mvn liquibase:update@liquibase-update -Plocal
+    + To execute goal update on db test of local env:
+     mvn liquibase:update@liquibase-update-test  -Plocal
