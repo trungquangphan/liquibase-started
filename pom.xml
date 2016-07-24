@@ -37,7 +37,7 @@
                 <version>3.5.1</version>
                 <executions>
                     <execution>
-                        <id>liquibase-db</id>
+                        <id>liquibase-update</id>
                         <configuration>
                             <propertyFile>src/main/resources/liquibase/liquibase.properties</propertyFile>
                         </configuration>
@@ -46,7 +46,7 @@
                         </goals>
                     </execution>
                     <execution>
-                        <id>liquibase-db-test</id>
+                        <id>liquibase-update-test</id>
                         <configuration>
                             <propertyFile>src/main/resources/liquibase/liquibase-test.properties</propertyFile>
                         </configuration>
