@@ -8,4 +8,11 @@ http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
             <column name="city" type="varchar(255)"/>
         </addColumn>
     </changeSet>
+    <changeSet id="8" author="trungphan">
+        <addColumn tableName="user">
+            <column name="group_id" type="serial">
+                <constraints foreignKeyName="group_user_fk" referencedColumnNames="id" referencedTableName="group"/>
+            </column>
+        </addColumn>
+    </changeSet>
 </databaseChangeLog>
