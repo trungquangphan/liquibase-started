@@ -27,7 +27,4 @@ http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
         </sql>
         <rollback/>
     </changeSet>
-    <changeSet id="6" author="trungphan">
-        <tagDatabase tag="initial"/>
-    </changeSet>
 </databaseChangeLog>
