@@ -12,9 +12,6 @@ http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
             </not>
         </preConditions>
         <sqlFile path="create-table-group.sql" relativeToChangelogFile="true"/>
-        <rollback>
-            <dropTable tableName="group"/>
-        </rollback>
     </changeSet>
     <changeSet id="4" author="trungphan">
         <preConditions onFail="CONTINUE">
@@ -25,9 +22,5 @@ http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
         <sql>
             insert into liquibase_sample.group values (1,'skynet','sql changeset demo')
         </sql>
-        <rollback/>
-    </changeSet>
-    <changeSet id="6" author="trungphan">
-        <tagDatabase tag="initial"/>
     </changeSet>
 </databaseChangeLog>

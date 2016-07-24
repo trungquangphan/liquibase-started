@@ -9,9 +9,4 @@ http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
             <column name="country" type="varchar(255)"/>
         </addColumn>
     </changeSet>
-
-    <!--For more clearly, we can move this changeset to a new change log file and named it as a tagChangeLog-->
-    <changeSet id="6" author="trungphan">
-        <tagDatabase tag="release-1.0"/>
-    </changeSet>
 </databaseChangeLog>
