@@ -40,7 +40,7 @@
                 </configuration>
                 <executions>
                     <execution>
-                        <id>liquidbase-update</id>
+                        <id>liquibase-update</id>
                         <goals>
                             <goal>update</goal>
                         </goals>
