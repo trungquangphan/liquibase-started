@@ -10,14 +10,16 @@ http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
                 <tableExists tableName="group"/>
             </not>
         </preConditions>
+        <comment>If the table group already exists, stop the execution immediately</comment>
         <sqlFile path="create-table-group.sql" relativeToChangelogFile="true"/>
     </changeSet>
-    <changeSet id="4" author="trungphan">
+    <changeSet id="4" author="trungphan" runAlways="true">
         <preConditions onFail="CONTINUE">
             <sqlCheck expectedResult="0">
                 SELECT COUNT(*) from liquibase_sample.group where liquibase_sample.group.id = 1
             </sqlCheck>
         </preConditions>
+        <comment>If the default data row already exists in DB, should not run it again.</comment>
         <sql>
             insert into liquibase_sample.group values (1,'skynet','sql changeset demo')
         </sql>
