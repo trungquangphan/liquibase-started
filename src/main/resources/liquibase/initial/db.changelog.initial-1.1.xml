@@ -13,6 +13,19 @@ http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
         <comment>If the table group already exists, stop the execution immediately</comment>
         <sqlFile path="create-table-group.sql" relativeToChangelogFile="true"/>
     </changeSet>
+
+    <!--<changeSet id="3a" author="trungphan">-->
+    <!--<preConditions onFail="WARN" onFailMessage="The table already exists. Continue to execute the changeset">-->
+    <!--<not>-->
+    <!--<tableExists tableName="group"/>-->
+    <!--</not>-->
+    <!--</preConditions>-->
+    <!--<dropTable tableName="group"/>-->
+    <!--<comment>If the table group already exists, stop the execution immediately</comment>-->
+    <!--<sqlFile path="create-table-group.sql" relativeToChangelogFile="true"/>-->
+    <!--</changeSet>-->
+
+
     <changeSet id="4" author="trungphan" runAlways="true">
         <preConditions onFail="CONTINUE">
             <sqlCheck expectedResult="0">
