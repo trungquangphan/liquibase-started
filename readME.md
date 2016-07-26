@@ -2,7 +2,7 @@
 This project contains the example code to execute the most used functions in Liquibase, and is located into different branch:
 - master: introduce some basic concepts like: changelog, changeset, change, preconditions.
 - diff: introduce the powerful functionality that generate the changelog automatically.
-- rollback: introduce tag, how to use tag to rollback the application state.
+- rollback: introduce tag, how to use tag to rollback the database state.
 - profile: use maven plugin to build profile that helps us to trigger liquibase on different environment.
 
 
